@@ -34,7 +34,6 @@ I built this project on my own to deepen my hands-on skills in cloud architectur
 - [Skills Demonstrated](#skills-demonstrated)
 - [Future Improvements](#future-improvements)
 - [Author](#author)
-- [License](#license)
 
 ---
 
