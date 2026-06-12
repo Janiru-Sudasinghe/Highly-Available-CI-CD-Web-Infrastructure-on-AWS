@@ -50,22 +50,25 @@ The platform also includes a containerized NGINX workload, an Amazon S3 static w
 
 ## Architecture
 
-![Architecture Diagram](docs/architecture.png)
+<p align="center">
+  <br>
+  <img src="./Docs/diagram.png" width="1000" alt="Network Topology Diagram">
+</p>
 
 **Request flow (runtime):**
 
 ```
-Users / Internet ──HTTP:80──> Application Load Balancer ──> EC2 Web Server 1 (AZ-a)
-                                                       └──> EC2 Web Server 2 (AZ-b)
+Users / Internet ──> HTTP:80 ──> Application Load Balancer ──> EC2 Web Server 1 (AZ-a)
+                                                          └──> EC2 Web Server 2 (AZ-b)
 ```
 
 **Deployment flow (CI/CD):**
 
 ```
-Developer ──git push──> Git Repository ──merge to main──> GitLab CI/CD Pipeline
-                                                              │ (SSH)
-                                                              ▼
-                                          EC2 Web Servers: git pull + redeploy + restart
+Developer ──> git push ──> Git Repository ──> merge to main ──> GitLab CI/CD Pipeline
+                                                                        │ (SSH)
+                                                                        ▼  
+                                           EC2 Web Servers: git pull + redeploy + restart
 ```
 
 Both web servers sit inside a single VPC but in different Availability Zones, which is what provides the high-availability guarantee.
