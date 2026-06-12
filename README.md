@@ -368,17 +368,17 @@ sudo systemctl start httpd
 
 ## Screenshots
 
-Evidence is stored in `docs/screenshots/`:
+Evidence is stored in [`docs/screenshots/`](docs/screenshots/):
 
 - EC2 instances running across two [`Availability Zones`](docs/screenshots/Availability_Zones.png)
-- Security group inbound rules
-- Docker container running and verified in a browser
-- Target group with healthy targets
-- Application Load Balancer with its DNS name
-- Failover test (one target unhealthy, site still serving)
-- S3 bucket, static hosting configuration, and live page
-- VPC, subnets, internet gateway, and route table
-- GitLab repository, pipeline configuration, and pipeline run
+- Security group [`inbound rules`](docs/screenshots/inbound_rules.png)
+- [`Docker container`](docs/screenshots/Docker_container.png) running and verified in a browser
+- Target group with [`healthy targets`](docs/screenshots/healthy_targets.png)
+- Application [`Load Balancer`](docs/screenshots/Load_Balancer.png) with its DNS name
+- [`Failover test`](docs/screenshots/Failover_test.png) (one target unhealthy, site still serving)
+- [`S3 bucket`](docs/screenshots/S3_bucket.png)
+- [`Static hosting`](docs/screenshots/Static_hosting.png) configuration
+- [`Live page`](docs/screenshots/Live_page.png)
 
 ---
 
