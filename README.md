@@ -408,8 +408,8 @@ Evidence is stored in [`docs/screenshots/`](docs/screenshots/):
 
 **Janiru Sudasinghe**
 
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [your-profile](https://linkedin.com/in/your-profile)
+- GitHub: [@Janiru-Sudasinghe](https://github.com/Janiru-Sudasinghe)
+- LinkedIn: [Janiru Sudasinghe](https://www.linkedin.com/in/janiru-sudasinghe/?skipRedirect=true)
 
 This was a personal, self-directed project built to strengthen my practical cloud and DevOps engineering skills.
 
