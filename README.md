@@ -1,15 +1,13 @@
 # Highly Available CI/CD Web Infrastructure on AWS
 
 > A self-directed cloud engineering project in which I designed, built, and deployed a fault-tolerant web platform on AWS with automated GitLab CI/CD delivery, containerization, multi-AZ load balancing, and security hardening.
-
-<p align="center">
+  
 ![AWS](https://img.shields.io/badge/AWS-EC2%20%7C%20ALB%20%7C%20S3%20%7C%20VPC-FF9900?logo=amazonaws&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-NGINX-2496ED?logo=docker&logoColor=white)
 ![GitLab CI/CD](https://img.shields.io/badge/GitLab-CI%2FCD-FC6D26?logo=gitlab&logoColor=white)
 ![Linux](https://img.shields.io/badge/Amazon%20Linux-2023-232F3E?logo=linux&logoColor=white)
 ![Bash](https://img.shields.io/badge/Bash-Scripting-4EAA25?logo=gnubash&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue)
-</p>
 
 I built this project on my own to deepen my hands-on skills in cloud architecture, DevOps automation, and infrastructure security. The goal was to take a single web application and make it **highly available**, **automatically deployable**, and **secure**, using the same building blocks used in production environments.
 
