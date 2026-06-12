@@ -77,12 +77,12 @@ Both web servers sit inside a single VPC but in different Availability Zones, wh
 
 ## Key Features
 
-- **Zero-downtime, automated deployments** — merges to `main` trigger a CI/CD pipeline that deploys to all servers over SSH.
-- **High availability** — two web servers across two Availability Zones behind an Application Load Balancer with health checks and automatic failover.
-- **Containerization** — a Docker-managed NGINX workload running alongside the host web server.
-- **Infrastructure as evidence** — reproducible Bash bootstrap (EC2 user data), declarative pipeline (`.gitlab-ci.yml`), and an explicit S3 bucket policy.
-- **Static asset hosting** — a public website served directly from Amazon S3.
-- **Security first** — SSH key-only authentication, password login disabled, and pipeline secrets stored as protected CI/CD variables (never in source control).
+- **Zero-downtime, automated deployments** ──> merges to `main` trigger a CI/CD pipeline that deploys to all servers over SSH.
+- **High availability** ──> two web servers across two Availability Zones behind an Application Load Balancer with health checks and automatic failover.
+- **Containerization** ──> a Docker-managed NGINX workload running alongside the host web server.
+- **Infrastructure as evidence** ──> reproducible Bash bootstrap (EC2 user data), declarative pipeline (`.gitlab-ci.yml`), and an explicit S3 bucket policy.
+- **Static asset hosting** ──> a public website served directly from Amazon S3.
+- **Security first** ──> SSH key-only authentication, password login disabled, and pipeline secrets stored as protected CI/CD variables (never in source control).
 
 ---
 
@@ -107,18 +107,10 @@ Both web servers sit inside a single VPC but in different Availability Zones, wh
 ```
 .
 ├── README.md
-├── docs/
-│   ├── architecture.png            # architecture diagram
-│   └── screenshots/                # console + browser evidence
-├── app/
-│   ├── index.template.html         # deployable web page (templated)
-│   └── .gitlab-ci.yml              # CI/CD pipeline definition
-├── docker/
-│   └── docker-compose.yml          # containerized NGINX workload
-├── infrastructure/
-│   ├── user-data-web-server.sh     # EC2 bootstrap script
-│   └── bucket-policy.json          # S3 public-read policy
-└── LICENSE
+└── docs/
+    ├── architecture.png            # architecture diagram
+    └── screenshots/                # console + browser evidence
+
 ```
 
 ---
