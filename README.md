@@ -39,7 +39,7 @@ I built this project on my own to deepen my hands-on skills in cloud architectur
 
 ## Overview
 
-This project provisions a small but production-style web platform on AWS. Application code lives in a Git repository, and every change merged to the `main` branch is automatically delivered to the running servers by a CI/CD pipeline — no manual deployment steps.
+This project provisions a small but production-style web platform on AWS. Application code lives in a Git repository, and every change merged to the `main` branch is automatically delivered to the running servers by a CI/CD pipeline - no manual deployment steps.
 
 User traffic enters through an **Application Load Balancer (ALB)**, which spreads requests across **two EC2 web servers placed in two separate Availability Zones**. The ALB continuously health-checks the servers and routes traffic only to healthy targets, so the application keeps serving even if one server (or an entire Availability Zone) goes down.
 
