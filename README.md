@@ -52,7 +52,7 @@ The platform also includes a containerized NGINX workload, an Amazon S3 static w
 
 <p align="center">
   <br>
-  <img src="./docs/architecture.png" width="1000" alt="Network Topology Diagram">
+  <img src="./docs/architecture.png" width="900" alt="Network Topology Diagram">
 </p>
 
 **Request flow (runtime):**
@@ -370,7 +370,7 @@ sudo systemctl start httpd
 
 Evidence is stored in `docs/screenshots/`:
 
-- EC2 instances running across two Availability Zones
+- EC2 instances running across two [`Availability Zones`](docs/screenshots/Availability_Zones.png)
 - Security group inbound rules
 - Docker container running and verified in a browser
 - Target group with healthy targets
