@@ -117,7 +117,7 @@ Both web servers sit inside a single VPC but in different Availability Zones, wh
 
 ## Prerequisites
 
-- An AWS account (the Application Load Balancer is **not** free-tier eligible — tear resources down after testing to avoid charges).
+- An AWS account (the Application Load Balancer is **not** free-tier eligible - tear resources down after testing to avoid charges).
 - A GitLab account for the source repository and CI/CD runners.
 - A terminal with `ssh` and `git`.
 - Basic familiarity with the AWS Console and the Linux command line.
@@ -175,7 +175,7 @@ ssh -i cloud-cw-key.pem ec2-user@<WEB_SERVER_1_PUBLIC_IP>
 ssh -i cloud-cw-key.pem ec2-user@<WEB_SERVER_2_PUBLIC_IP>
 ```
 
-Each server is then reachable at `http://<WEB_SERVER_PUBLIC_IP>` and returns a page identifying the host that served it — which makes load balancing visible later.
+Each server is then reachable at `http://<WEB_SERVER_PUBLIC_IP>` and returns a page identifying the host that served it - which makes load balancing visible later.
 
 ### 3. Containerization with Docker
 
@@ -198,7 +198,7 @@ docker ps
 
 The container is verified in a browser at `http://<EC2_PUBLIC_IP>:8080`.
 
-The same workload is also captured declaratively for reproducibility — `docker/docker-compose.yml`:
+The same workload is also captured declaratively for reproducibility - `docker/docker-compose.yml`:
 
 ```yaml
 services:
@@ -216,8 +216,8 @@ docker compose up -d
 
 ### 4. Load Balancing and High Availability
 
-1. **Target group** (`web-tg`) — type *Instances*, protocol `HTTP:80`, health check path `/`. Both EC2 instances are registered.
-2. **Application Load Balancer** — internet-facing, spanning **two Availability Zones**, with an `HTTP:80` listener that forwards to the target group.
+1. **Target group** (`web-tg`) ──> type *Instances*, protocol `HTTP:80`, health check path `/`. Both EC2 instances are registered.
+2. **Application Load Balancer** ──> internet-facing, spanning **two Availability Zones**, with an `HTTP:80` listener that forwards to the target group.
 3. The ALB health-checks each target continuously and routes only to healthy instances.
 
 Once the targets report **healthy**, the application is served from the load balancer's DNS name:
@@ -296,7 +296,7 @@ cd ~
 git clone https://<DEPLOY_TOKEN_USERNAME>:<DEPLOY_TOKEN>@gitlab.com/<gitlab-username>/cloud-cw-app.git app
 ```
 
-**Pipeline definition** — `app/.gitlab-ci.yml`. It runs only on `main`, loads the SSH key from a protected variable, then for each server pulls the latest code, renders the page with that server's hostname, and restarts the web service:
+**Pipeline definition** - `app/.gitlab-ci.yml`. It runs only on `main`, loads the SSH key from a protected variable, then for each server pulls the latest code, renders the page with that server's hostname, and restarts the web service:
 
 ```yaml
 stages:
@@ -415,6 +415,4 @@ This was a personal, self-directed project built to strengthen my practical clou
 
 ---
 
-## License
 
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
